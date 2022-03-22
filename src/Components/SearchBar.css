@@ -27,7 +27,7 @@
 }
 
 .SearchBar input {
-  width: 287px;
+  width: 20rem;
   padding: 1rem;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -42,7 +42,7 @@
 
 .SearchButton {
   cursor: pointer;
-  width: 8.11rem;
+  width: 17rem;
   padding: .77rem;
   margin: 1rem;
   border-radius: 54px;
@@ -62,8 +62,8 @@
 .map {
   display: flex;
   flex-direction: column;
-  width: 15vw;
-  height: 15vw;
+  width: 20rem;
+  height: 20rem;
   margin-bottom: 3vw;
 }
 
