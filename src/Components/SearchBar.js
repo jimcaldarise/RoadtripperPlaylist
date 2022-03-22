@@ -48,28 +48,26 @@ class SearchBar extends React.Component {
       this.getCityState()
    }
 
-   getCityState(position) {
-      const data = {
-         method: 'GET',
-         url: 'http://localhost:80/'
-      }
+getCityState(position) {
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.lat},${this.state.long}&key=${GOOGLE_MAPS_API_KEY}`)
+      .then(response => response.json())
+      .then((data) => {
+         if(data.results[0]) {
+            var components = data.results[0].address_components;
 
-      console.log(data);
-
-      if(data.results[0]) {
-         var components = data.results[0].address_components;
-
-         for(var component=0; component<(components.length); component++) {
-            if(components[component].types[0]==='administrative_area_level_1') {
-               this.setState({stateName: components[component].long_name
-               })
-            }
-            if(components[component].types[0]==='locality') {
-               this.setState({cityName: components[component].long_name
-               })
+            for(var component=0; component<(components.length); component++) {
+               if(components[component].types[0]==='administrative_area_level_1') {
+                  this.setState({stateName: components[component].long_name
+                  })
+               }
+               if(components[component].types[0]==='locality') {
+                  this.setState({cityName: components[component].long_name
+                  })
+               }
             }
          }
-      }
+      })
+      .catch(error=> alert(error))
    }
 
    searchCity(event) {
