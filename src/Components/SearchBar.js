@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const REACT_APP_GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 class SearchBar extends React.Component {
    constructor(props) {
@@ -49,7 +49,7 @@ class SearchBar extends React.Component {
    }
 
 getCityState(position) {
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.lat},${this.state.long}&key=${GOOGLE_MAPS_API_KEY}`)
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.lat},${this.state.long}&key=${REACT_APP_GOOGLE_MAPS_API_KEY}`)
       .then(response => response.json())
       .then((data) => {
          if(data.results[0]) {
