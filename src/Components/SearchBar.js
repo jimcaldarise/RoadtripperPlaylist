@@ -109,7 +109,7 @@ getCityState(position) {
                {
                   this.state.lat && this.state.long ?
                   <div className='map'>
-                     <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.lat},${this.state.long}&zoom=12&size=400x400&key=${REACT_APP_GOOGLE_MAPS_API_KEY}`} alt="map of current location"/>
+                     <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.lat},${this.state.long}&zoom=12&size=250x250&key=${REACT_APP_GOOGLE_MAPS_API_KEY}`} alt="map of current location"/>
                      <div className='Buttons'>
                         <button className="SearchButton" onClick={this.searchCity}>USE CURRENT CITY</button>
                         <button className="SearchButton" onClick={this.searchState}>USE CURRENT STATE</button>
