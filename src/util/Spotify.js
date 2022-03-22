@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../Components/SearchBar';
 
-const clientId = '177d4f9af5fa4136b5640d6fdd051e05';
+const clientId = process.env.SPOTIFY_API_KEY;
 const redirectURI = 'http://localhost:3000/';
 let accessToken;
 
