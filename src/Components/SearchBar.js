@@ -104,7 +104,7 @@ getCityState(position) {
          <div className='mainContainer'>
             <div className='mapContainer'>
                <div className='FindButtonContainer'>
-                  <button className='SearchButton' onClick={this.getLocation}>FIND ME!</br>(THIS MAY TAKE A MOMENT)</button> 
+                  <button className='SearchButton' onClick={this.getLocation}>{"FIND ME!\n(THIS MAY TAKE A MOMENT)"}</button> 
                </div>
                {
                   this.state.lat && this.state.long ?
