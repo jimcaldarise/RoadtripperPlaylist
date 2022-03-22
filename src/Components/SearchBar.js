@@ -54,6 +54,8 @@ class SearchBar extends React.Component {
          url: 'http://localhost:80/'
       }
 
+      console.log(data);
+
       if(data.results[0]) {
          var components = data.results[0].address_components;
 
