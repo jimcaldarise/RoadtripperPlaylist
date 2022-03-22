@@ -1,8 +1,8 @@
 import React from 'react';
 import SearchBar from '../Components/SearchBar';
 
-const clientId = SPOTIFY_API_KEY;
-const redirectURI = 'http://localhost:3000/';
+const clientId = process.env.SPOTIFY_API_KEY;
+const redirectURI = 'https://roadtripper-playlist.heroku.com/';
 let accessToken;
 
 const Spotify = {

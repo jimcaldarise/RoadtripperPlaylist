@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const GOOGLE_MAPS_API_KEY = GOOGLE_MAPS_API_KEY;
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 class SearchBar extends React.Component {
    constructor(props) {
