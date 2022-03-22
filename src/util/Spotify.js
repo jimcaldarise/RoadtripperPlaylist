@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../Components/SearchBar';
 
-const clientId = process.env.SPOTIFY_API_KEY;
+const clientId = SPOTIFY_API_KEY;
 const redirectURI = 'http://localhost:3000/';
 let accessToken;
 
