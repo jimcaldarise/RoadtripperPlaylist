@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../Components/SearchBar';
 
-const clientId = process.env.SPOTIFY_API_KEY;
+const clientId = process.env.REACT_APP_SPOTIFY_API_KEY;
 const redirectURI = 'https://roadtripper-playlist.heroku.com/';
 let accessToken;
 
