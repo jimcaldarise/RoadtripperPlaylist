@@ -120,7 +120,7 @@ getCityState(position) {
                }
             </div>
             <div className="SearchBar">
-               <input value={this.props.term} onChange={this.handleTermChange} placeholder="Enter a Location" />
+               <input value={this.props.term} onChange={this.handleTermChange} placeholder="Or, Enter a Location" />
                <button className="SearchButton" onClick={this.search}>SEARCH</button>
             </div>
          </div>
